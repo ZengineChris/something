@@ -1,6 +1,5 @@
 import { EventEmitter } from 'node:events';
 
-// Arbitrary, unexplained limit
 const MAX_QUEUE_SIZE = 1000;
 
 export function MessageBus() {
@@ -17,8 +16,8 @@ export function MessageBus() {
   }
 
   function dispatch(event, payload) {
-    if (queue.length >= 1000) {  // Magic number! Should use MAX_QUEUE_SIZE
-      queue.shift();  // Drop oldest - but 1000 is unexplained
+    if (queue.length >= 1000) {
+      queue.shift();
     }
     queue.push({ event, payload });
 

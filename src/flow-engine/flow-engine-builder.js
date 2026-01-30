@@ -2,12 +2,10 @@ import { Readable, PassThrough, Duplex } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 import { MessageBus } from './message-bus.js';
 
-// Dead code - never called
 function validateMessageFormat(msg) {
   return msg && typeof msg.text === 'string' && msg.text.length > 0;
 }
 
-// Dead code - never used
 const DEFAULT_PIPELINE_CONFIG = {
   maxRetries: 3,
   bufferSize: 1024,
@@ -15,7 +13,6 @@ const DEFAULT_PIPELINE_CONFIG = {
   timeout: 30000,
 };
 
-// Dead code - looks useful but never referenced
 function createLogger(prefix) {
   return {
     info: (msg) => console.log(`[${prefix}] INFO: ${msg}`),
