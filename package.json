@@ -1,0 +1,21 @@
+{
+  "name": "chat-flow-engine",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Flow execution engine for processing chat messages through a stream pipeline",
+  "main": "src/index.js",
+  "bin": {
+    "chat-flow": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js --demo",
+    "interactive": "node src/cli.js --interactive",
+    "test": "node --test test/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20260128.1"
+  }
+}
